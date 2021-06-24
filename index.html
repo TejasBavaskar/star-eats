@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Star Eats</title>
-    <link rel="stylesheet" href="styles/main.scss">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="styles/main.scss" />
+  </head>
+  <body>
+    <!--header-->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Star <span>Eats</span></h1>
+        </div>
+        <div class="current-details">
+          <div class="header-options">
+            <span>London</span>
+          </div>
+          <div class="header-options">
+            <span>Delever Now</span>
+          </div>
+        </div>
+        <div class="search-bar">
+          <div class="header-options">
+            Search
+          </div>
+          <div class="header-options">
+            Sign In
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--options-->
+    <div class="options">
+      <div class="container">
+        <button class="options-btn selected">
+          Delivery
+        </button>
+        <button class="options-btn">
+          Pick-up
+        </button>
+      </div>
+    </div>
+    <!--food items listings-->
+    <div class="listings">
+      <div class="container">
+        <div class="header">
+          <div class="header-title">
+            <h2>When you're hungry now</h2>
+            <span>The fastest food to your door</span>
+          </div>
+          <div class="header-view-options">
+            <div class="view-all">
+              <span>View all</span>
+            </div>
+            <div class="view-slider">
+              <span class="arrow left">
+                <i data-feather="arrow-left"></i>
+              </span>
+              <span class="arrow right dark">
+                <i data-feather="arrow-right"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+  </body>
 </html>
