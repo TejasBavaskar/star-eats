@@ -1,0 +1,183 @@
+:root {
+  --color-green: #06c167;
+  --color-grey: #ddd;
+  --color-grey-dark: #757575;
+  --font-family: "Uber Move Text", sans-serif;
+  font-family: "Uber Move Text", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: calc(100% - 120px);
+  margin: auto;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+header {
+  font-family: var(--font-family);
+}
+header .container {
+  display: flex;
+  align-items: center;
+}
+header .logo h1 {
+  font-weight: 600;
+}
+header .logo h1 span {
+  color: var(--color-green);
+}
+header .search-bar {
+  margin-left: auto;
+}
+header .header-options {
+  font-weight: 550;
+  padding-left: 5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+header .header-options span {
+  margin-left: 0.5rem;
+}
+header .current-details, header .search-bar {
+  display: flex;
+}
+
+.options {
+  padding: 1rem 0;
+}
+.options .options-btn {
+  background-color: var(--color-grey);
+  border: 0px;
+  border-radius: 25px;
+  padding: 0.8rem 1rem;
+  margin: 0 10px 0 0;
+  display: inline-flex;
+  align-items: center;
+}
+.options .options-btn span {
+  font-size: 0.8rem;
+  font-family: var(--font-family);
+  letter-spacing: 1px;
+}
+.options .options-btn svg {
+  width: 20px;
+  margin-right: 5px;
+}
+.options .options-btn.selected {
+  background-color: black;
+  color: white;
+}
+
+.listings .header {
+  display: flex;
+}
+.listings .header .header-title h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.listings .header .header-title span {
+  color: var(--color-grey-dark);
+}
+.listings .header .header-view-options {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-top: 25px;
+}
+.listings .header .header-view-options .view-all {
+  padding-right: 3rem;
+}
+.listings .header .header-view-options .view-all span {
+  color: var(--color-green);
+}
+.listings .header .header-view-options .view-slider .arrow {
+  background-color: var(--color-grey);
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.listings .header .header-view-options .view-slider .arrow.dark, .listings .header .header-view-options .view-slider .arrow:hover {
+  opacity: 1;
+}
+.listings .listings-grid {
+  display: flex;
+  justify-content: space-between;
+}
+.listings .listings-grid .listings-grid-element {
+  width: 31%;
+  cursor: pointer;
+}
+.listings .listings-grid .listings-grid-element .image {
+  height: 240px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+.listings .listings-grid .listings-grid-element .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.listings .listings-grid .listings-grid-element .food-text {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey);
+  padding: 0.5rem 0;
+}
+.listings .listings-grid .listings-grid-element .food-text h3 {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+.listings .listings-grid .listings-grid-element .food-text span {
+  font-size: 0.9rem;
+}
+.listings .listings-grid .listings-grid-element .food-text .food-info {
+  display: flex;
+  align-items: center;
+}
+.listings .listings-grid .listings-grid-element .food-text .food-info .time-icon {
+  height: 20px;
+}
+.listings .listings-grid .listings-grid-element .food-text .food-info .time-icon .clock {
+  height: 100%;
+}
+.listings .listings-grid .listings-grid-element .food-text .food-info .dot {
+  margin: 0 4px;
+}
+.listings .listings-grid .listings-grid-element .food-text .food-rating {
+  margin: auto 0 auto auto;
+}
+.listings .listings-grid .listings-grid-element .food-text .food-rating span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: var(--color-grey);
+}
+.listings .listings-grid .listings-grid-element .food-text .food-rating .circle {
+  width: 30px;
+  height: 30px;
+}
+.listings .listings-grid .listings-grid-element .food-text-tags {
+  padding: 0.5rem 0;
+}
+.listings .listings-grid .listings-grid-element .food-text-tags span {
+  font-size: 0.7rem;
+  color: var(--color-grey-dark);
+}
+
+/*# sourceMappingURL=/main.48b3db1d.css.map */
