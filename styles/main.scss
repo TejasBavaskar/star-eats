@@ -44,7 +44,7 @@ header {
   }
   .header-options {
     font-weight: 550;
-    padding-left: 5rem;
+    padding-left: 4rem;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -53,9 +53,28 @@ header {
       margin-left: 0.5rem;
     }
   }
-  .current-details, .search-bar {
+  .current-details {
     display: flex;
   }
+
+  .search-bar {
+    display: flex;
+
+    .search-elements {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box {
+      display: none;
+      width: 200px;
+      height: 2rem;
+      font-size: 1rem;
+      border: 2px solid black;
+
+    }
+  }
+
 }
 .options {
   padding: 1rem 0;
@@ -67,6 +86,7 @@ header {
     margin: 0 10px 0 0;
     display: inline-flex;
     align-items: center;
+    cursor: pointer;
 
     span {
       font-size: 0.8rem;
@@ -127,7 +147,26 @@ header {
 
   .listings-grid {
     display: flex;
-    justify-content: space-between;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory; //setting parent property (see child property)
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar  {
+      display: none;
+    }
+
+    .listings-col {
+      display: flex;
+      justify-content: space-between;
+      flex-basis: 100%;   //flex-width of this div will always be 100%
+      flex-grow: 0;       // do not grow this div
+      flex-shrink: 0;     // do not shrink this div
+      scroll-snap-align: start; //child property for scrol-snap
+      margin-left: 3.2%;
+      
+    }
+    
     .listings-grid-element {
       width: 31%;
       cursor: pointer;
