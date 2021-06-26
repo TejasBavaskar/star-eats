@@ -27,8 +27,11 @@
         </div>
         <div class="search-bar">
           <div class="header-options">
-            <i data-feather="search"></i>
-            <span>Search</span>
+            <div class="search-elements">
+              <i data-feather="search"></i>
+              <span>Search</span>
+            </div>
+            <input type="search" name="search" class="search-box">
           </div>
           <div class="header-options">
             <i data-feather="log-in"></i>
@@ -40,16 +43,17 @@
     <!--options-->
     <div class="options">
       <div class="container">
-        <button class="options-btn selected">
+        <button class="options-btn selected" id="delivery-btn">
           <i data-feather="shopping-bag"></i>
           <span>Delivery</span>
         </button>
-        <button class="options-btn">
+        <button class="options-btn" id="pickup-btn">
           <i data-feather="truck"></i>
           <span>Pick-up</span>
         </button>
       </div>
     </div>
+
     <!--food items listings-->
     <div class="listings">
       <div class="container">
@@ -73,101 +77,199 @@
           </div>
         </div>
         <div class="listings-grid">
-          <!--item 1-->
-          <div class="listings-grid-element">
-            <div class="image">
-              <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" alt="">
-            </div>
-            <div class="food-text">
-              <div class="food-text-title">
-                <h3>Burger Kings, Veg Burger</h3>
-                <div class="food-info">
-                  <span class="time-icon">
-                    <i data-feather="clock" class="clock"></i>
-                  </span>
-                  <span>
-                    <span class="dot"> • </span>
-                    20-30 min
-                    <span class="dot"> • </span>
-                    $ 4.99 Delivery Fee
-                    <span class="dot"> • </span>
-                    $
-                  </span>
+          <!--listings-col1-->
+          <div class="listings-col">
+            <!--item 1-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Burger Kings, Veg Burger</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.4</span>
                 </div>
               </div>
-              <div class="food-rating">
-                <span class="circle">4.4</span>
+              <div class="food-text-tags">
+                <span>Salad • Cheese • Bun • Mushrooms</span>
               </div>
             </div>
-            <div class="food-text-tags">
-              <span>Salad • Cheese • Bun • Mushrooms</span>
+
+            <!--item 2-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Mumbai Special Samosa</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.2</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Flour • Peas • Chilli • Potatoes</span>
+              </div>
+            </div>
+
+            <!--item 3-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://b.zmtcdn.com/data/pictures/3/143/7398da37ab73c4c7cb16ac860e577369.jpg?fit=around%7C450%3A450&crop=450%3A450%3B-1%2C73" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Dominos Veg Pizza</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">3.9</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Paprika • Cheese • Olive • Tomotoes • Mozzarella</span>
+              </div>
             </div>
           </div>
 
-          <!--item 2-->
-          <div class="listings-grid-element">
-            <div class="image">
-              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
-            </div>
-            <div class="food-text">
-              <div class="food-text-title">
-                <h3>Mumbai Special Samosa</h3>
-                <div class="food-info">
-                  <span class="time-icon">
-                    <i data-feather="clock" class="clock"></i>
-                  </span>
-                  <span>
-                    <span class="dot"> • </span>
-                    20-30 min
-                    <span class="dot"> • </span>
-                    $ 4.99 Delivery Fee
-                    <span class="dot"> • </span>
-                    $
-                  </span>
+          <!--listings-col2-->
+          <div class="listings-col">
+            <!--item 1-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=819&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Chicken Masala Kebab</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.4</span>
                 </div>
               </div>
-              <div class="food-rating">
-                <span class="circle">4.2</span>
+              <div class="food-text-tags">
+                <span>Salad • Cheese • Bun • Mushrooms</span>
               </div>
             </div>
-            <div class="food-text-tags">
-              <span>Flour • Peas • Chilli • Potatoes</span>
-            </div>
-          </div>
 
-          <!--item 3-->
-          <div class="listings-grid-element">
-            <div class="image">
-              <img src="https://b.zmtcdn.com/data/pictures/3/143/7398da37ab73c4c7cb16ac860e577369.jpg?fit=around%7C450%3A450&crop=450%3A450%3B-1%2C73" alt="">
-            </div>
-            <div class="food-text">
-              <div class="food-text-title">
-                <h3>Dominos Veg Pizza</h3>
-                <div class="food-info">
-                  <span class="time-icon">
-                    <i data-feather="clock" class="clock"></i>
-                  </span>
-                  <span>
-                    <span class="dot"> • </span>
-                    20-30 min
-                    <span class="dot"> • </span>
-                    $ 4.99 Delivery Fee
-                    <span class="dot"> • </span>
-                    $
-                  </span>
+            <!--item 2-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Butter Chicken Masala</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.2</span>
                 </div>
               </div>
-              <div class="food-rating">
-                <span class="circle">3.9</span>
+              <div class="food-text-tags">
+                <span>Flour • Peas • Chilli • Potatoes</span>
               </div>
             </div>
-            <div class="food-text-tags">
-              <span>Paprika • Cheese • Olive • Tomotoes • Mozzarella</span>
+
+            <!--item 3-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=382&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Ice Cream Sundae</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">3.9</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Paprika • Cheese • Olive • Tomotoes • Mozzarella</span>
+              </div>
             </div>
-          </div>
-            
           </div>
         </div>
+      </div>
     </div>
 
     <div class="listings">
@@ -190,104 +292,422 @@
             </div>
           </div>
         </div>
+
         <div class="listings-grid">
-          <!--item 1-->
-          <div class="listings-grid-element">
-            <div class="image">
-              <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" alt="">
-            </div>
-            <div class="food-text">
-              <div class="food-text-title">
-                <h3>Burger Kings, Veg Burger</h3>
-                <div class="food-info">
-                  <span class="time-icon">
-                    <i data-feather="clock" class="clock"></i>
-                  </span>
-                  <span>
-                    <span class="dot"> • </span>
-                    20-30 min
-                    <span class="dot"> • </span>
-                    $ 4.99 Delivery Fee
-                    <span class="dot"> • </span>
-                    $
-                  </span>
+          <!--listings-col1-->
+          <div class="listings-col">
+            <!--item 1-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Burger Kings, Veg Burger</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.4</span>
                 </div>
               </div>
-              <div class="food-rating">
-                <span class="circle">4.4</span>
+              <div class="food-text-tags">
+                <span>Salad • Cheese • Bun • Mushrooms</span>
               </div>
             </div>
-            <div class="food-text-tags">
-              <span>Salad • Cheese • Bun • Mushrooms</span>
+
+            <!--item 2-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Mumbai Special Samosa</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.2</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Flour • Peas • Chilli • Potatoes</span>
+              </div>
+            </div>
+
+            <!--item 3-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://b.zmtcdn.com/data/pictures/3/143/7398da37ab73c4c7cb16ac860e577369.jpg?fit=around%7C450%3A450&crop=450%3A450%3B-1%2C73" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Dominos Veg Pizza</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">3.9</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Paprika • Cheese • Olive • Tomotoes • Mozzarella</span>
+              </div>
             </div>
           </div>
 
-          <!--item 2-->
-          <div class="listings-grid-element">
-            <div class="image">
-              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
-            </div>
-            <div class="food-text">
-              <div class="food-text-title">
-                <h3>Mumbai Special Samosa</h3>
-                <div class="food-info">
-                  <span class="time-icon">
-                    <i data-feather="clock" class="clock"></i>
-                  </span>
-                  <span>
-                    <span class="dot"> • </span>
-                    20-30 min
-                    <span class="dot"> • </span>
-                    $ 4.99 Delivery Fee
-                    <span class="dot"> • </span>
-                    $
-                  </span>
+          <!--listings-col2-->
+          <div class="listings-col">
+            <!--item 1-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=819&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Chicken Masala Kebab</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.4</span>
                 </div>
               </div>
-              <div class="food-rating">
-                <span class="circle">4.2</span>
+              <div class="food-text-tags">
+                <span>Salad • Cheese • Bun • Mushrooms</span>
               </div>
             </div>
-            <div class="food-text-tags">
-              <span>Flour • Peas • Chilli • Potatoes</span>
-            </div>
-          </div>
 
-          <!--item 3-->
-          <div class="listings-grid-element">
-            <div class="image">
-              <img src="https://b.zmtcdn.com/data/pictures/3/143/7398da37ab73c4c7cb16ac860e577369.jpg?fit=around%7C450%3A450&crop=450%3A450%3B-1%2C73" alt="">
-            </div>
-            <div class="food-text">
-              <div class="food-text-title">
-                <h3>Dominos Veg Pizza</h3>
-                <div class="food-info">
-                  <span class="time-icon">
-                    <i data-feather="clock" class="clock"></i>
-                  </span>
-                  <span>
-                    <span class="dot"> • </span>
-                    20-30 min
-                    <span class="dot"> • </span>
-                    $ 4.99 Delivery Fee
-                    <span class="dot"> • </span>
-                    $
-                  </span>
+            <!--item 2-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Butter Chicken Masala</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.2</span>
                 </div>
               </div>
-              <div class="food-rating">
-                <span class="circle">3.9</span>
+              <div class="food-text-tags">
+                <span>Flour • Peas • Chilli • Potatoes</span>
               </div>
             </div>
-            <div class="food-text-tags">
-              <span>Paprika • Cheese • Olive • Tomotoes • Mozzarella</span>
+
+            <!--item 3-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=382&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Ice Cream Sundae</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">3.9</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Paprika • Cheese • Olive • Tomotoes • Mozzarella</span>
+              </div>
             </div>
           </div>
-            
         </div>
       </div>
     </div>
 
+    <div class="listings">
+      <div class="container">
+        <div class="header">
+          <div class="header-title">
+            <h2>Best offers for you</h2>
+            <span>Grab it now!!</span>
+          </div>
+          <div class="header-view-options">
+            <div class="view-all">
+              <span>View all</span>
+            </div>
+            <div class="view-slider">
+              <span class="arrow left circle">
+                <i data-feather="arrow-left"></i>
+              </span>
+              <span class="arrow right circle dark">
+                <i data-feather="arrow-right"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="listings-grid">
+          <!--listings-col1-->
+          <div class="listings-col">
+            <!--item 1-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Burger Kings, Veg Burger</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.4</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Salad • Cheese • Bun • Mushrooms</span>
+              </div>
+            </div>
+
+            <!--item 2-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Mumbai Special Samosa</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.2</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Flour • Peas • Chilli • Potatoes</span>
+              </div>
+            </div>
+
+            <!--item 3-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://b.zmtcdn.com/data/pictures/3/143/7398da37ab73c4c7cb16ac860e577369.jpg?fit=around%7C450%3A450&crop=450%3A450%3B-1%2C73" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Dominos Veg Pizza</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">3.9</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Paprika • Cheese • Olive • Tomotoes • Mozzarella</span>
+              </div>
+            </div>
+          </div>
+
+          <!--listings-col2-->
+          <div class="listings-col">
+            <!--item 1-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=819&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Chicken Masala Kebab</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.4</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Salad • Cheese • Bun • Mushrooms</span>
+              </div>
+            </div>
+
+            <!--item 2-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Butter Chicken Masala</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">4.2</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Flour • Peas • Chilli • Potatoes</span>
+              </div>
+            </div>
+
+            <!--item 3-->
+            <div class="listings-grid-element">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=382&q=80" alt="">
+              </div>
+              <div class="food-text">
+                <div class="food-text-title">
+                  <h3>Ice Cream Sundae</h3>
+                  <div class="food-info">
+                    <span class="time-icon">
+                      <i data-feather="clock" class="clock"></i>
+                    </span>
+                    <span>
+                      <span class="dot"> • </span>
+                      20-30 min
+                      <span class="dot"> • </span>
+                      $ 4.99 Delivery Fee
+                      <span class="dot"> • </span>
+                      $
+                    </span>
+                  </div>
+                </div>
+                <div class="food-rating">
+                  <span class="circle">3.9</span>
+                </div>
+              </div>
+              <div class="food-text-tags">
+                <span>Paprika • Cheese • Olive • Tomotoes • Mozzarella</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/main.d8ebb8d6.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>feather.replace();</script>
   </body>

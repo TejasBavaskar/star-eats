@@ -46,7 +46,7 @@ header .search-bar {
 }
 header .header-options {
   font-weight: 550;
-  padding-left: 5rem;
+  padding-left: 4rem;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -54,8 +54,22 @@ header .header-options {
 header .header-options span {
   margin-left: 0.5rem;
 }
-header .current-details, header .search-bar {
+header .current-details {
   display: flex;
+}
+header .search-bar {
+  display: flex;
+}
+header .search-bar .search-elements {
+  display: flex;
+  align-items: center;
+}
+header .search-bar .search-box {
+  display: none;
+  width: 200px;
+  height: 2rem;
+  font-size: 1rem;
+  border: 2px solid black;
 }
 
 .options {
@@ -69,6 +83,7 @@ header .current-details, header .search-bar {
   margin: 0 10px 0 0;
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
 }
 .options .options-btn span {
   font-size: 0.8rem;
@@ -118,7 +133,22 @@ header .current-details, header .search-bar {
 }
 .listings .listings-grid {
   display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.listings .listings-grid::-webkit-scrollbar {
+  display: none;
+}
+.listings .listings-grid .listings-col {
+  display: flex;
   justify-content: space-between;
+  flex-basis: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  margin-left: 3.2%;
 }
 .listings .listings-grid .listings-grid-element {
   width: 31%;

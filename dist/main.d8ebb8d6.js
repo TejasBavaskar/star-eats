@@ -117,79 +117,83 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"C:/Users/tejka/AppData/Roaming/nvm/v12.22.1/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"scripts/main.js":[function(require,module,exports) {
+window.onload = function () {
+  var listingsList = document.querySelectorAll('.listings');
+  listingsList.forEach(function (list) {
+    handleSlider(list);
+  });
+  toggleHeaderOptions();
+  toggleSearchBox();
+};
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+var handleSlider = function handleSlider(list) {
+  var leftArrow = list.querySelector('.left');
+  var rightArrow = list.querySelector('.right');
+  var listingsGrid = list.querySelector('.listings-grid');
 
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"C:/Users/tejka/AppData/Roaming/nvm/v12.22.1/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
+  if (!listingsGrid || !leftArrow || !rightArrow) {
+    console.log('Error in slider handler');
+    console.log('Left Arrow: ', leftArrow);
+    console.log('Right Arrow: ', rightArrow);
+    console.log('listingsGrid: ', listingsGrid);
     return;
   }
 
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
+  rightArrow.addEventListener('click', function () {
+    toggleSliderArrowClass('right');
+    listingsGrid.scrollTo({
+      left: listingsGrid.offsetWidth,
+      behaviour: 'smooth'
+    });
+  });
+  leftArrow.addEventListener('click', function () {
+    toggleSliderArrowClass('left');
+    listingsGrid.scrollTo({
+      left: 0,
+      behaviour: 'smooth'
+    });
+  });
 
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
+  var toggleSliderArrowClass = function toggleSliderArrowClass(direction) {
+    if (direction === 'right') {
+      rightArrow.classList.remove('dark');
+      leftArrow.classList.add('dark');
+    } else if (direction === 'left') {
+      leftArrow.classList.remove('dark');
+      rightArrow.classList.add('dark');
     }
+  };
+};
 
-    cssTimeout = null;
-  }, 50);
-}
+var toggleHeaderOptions = function toggleHeaderOptions() {
+  var deliveryBtn = document.getElementById('delivery-btn');
+  var pickupBtn = document.getElementById('pickup-btn');
+  deliveryBtn.addEventListener('click', function () {
+    deliveryBtn.classList.add('selected');
+    pickupBtn.classList.remove('selected');
+  });
+  pickupBtn.addEventListener('click', function () {
+    pickupBtn.classList.add('selected');
+    deliveryBtn.classList.remove('selected');
+  });
+};
 
-module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/tejka/AppData/Roaming/nvm/v12.22.1/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"styles/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"C:/Users/tejka/AppData/Roaming/nvm/v12.22.1/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"C:/Users/tejka/AppData/Roaming/nvm/v12.22.1/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var toggleSearchBox = function toggleSearchBox() {
+  var searchElements = document.querySelector('.search-elements');
+  var searchBox = document.querySelector('.search-box');
+  console.log('searchElements: ', searchElements);
+  console.log('searchBox: ', searchBox);
+  searchElements.addEventListener('mouseover', function (event) {
+    searchElements.style.display = "none";
+    searchBox.style.display = "flex";
+  });
+  searchBox.addEventListener('mouseout', function () {
+    searchBox.style.display = "none";
+    searchElements.style.display = "flex";
+  });
+};
+},{}],"C:/Users/tejka/AppData/Roaming/nvm/v12.22.1/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +397,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/tejka/AppData/Roaming/nvm/v12.22.1/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/main.48b3db1d.js.map
+},{}]},{},["C:/Users/tejka/AppData/Roaming/nvm/v12.22.1/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","scripts/main.js"], null)
+//# sourceMappingURL=/main.d8ebb8d6.js.map
